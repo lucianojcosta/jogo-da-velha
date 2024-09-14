@@ -8,24 +8,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="turn">
-        <p style="float: left; margin-right: 10px;">Vez do Jogador: </p>
-        <img src="" alt="Imagem de um X" height="50">
+    <div id="initial-screen">
+        <h1>Jogo da Velha</h1>
+        <div id="player-names">
+            <label for="player1">Nome do Jogador 1:</label>
+            <input type="text" id="player1" placeholder="Jogador 1">
+            <label for="player2">Nome do Jogador 2:</label>
+            <input type="text" id="player2" placeholder="Jogador 2">
+            <button id="start-game">Começar Jogo</button>
+        </div>
     </div>
 
-    <div class="tab">
-        <div id="a1" class="espaco" jogada=""></div>
-        <div id="a2" class="espaco" jogada=""></div>
-        <div id="a3" class="espaco" jogada=""></div>
+    <div id="game-screen" style="display:none;">
+        <div id="players"></div>
+        <div id="turn">
+            <p>Vez do Jogador:</p>
+            <p id="current-player">Nenhum</p>
+        </div>
+        <div class="tab">
+            <div id="a1" class="espaco"></div>
+            <div id="a2" class="espaco"></div>
+            <div id="a3" class="espaco"></div>
 
-        <div id="b1" class="espaco" jogada=""></div>
-        <div id="b2" class="espaco" jogada=""></div>
-        <div id="b3" class="espaco" jogada=""></div>
+            <div id="b1" class="espaco"></div>
+            <div id="b2" class="espaco"></div>
+            <div id="b3" class="espaco"></div>
 
-        <div id="c1" class="espaco" jogada=""></div>
-        <div id="c2" class="espaco" jogada=""></div>
-        <div id="c3" class="espaco" jogada=""></div>
-
+            <div id="c1" class="espaco"></div>
+            <div id="c2" class="espaco"></div>
+            <div id="c3" class="espaco"></div>
+        </div>
+        <button id="reset-game">Reiniciar Jogo</button>
+        <div id="ranking">
+            <h3>Ranking</h3>
+            <p id="ranking-player1">Jogador 1: 0 vitórias</p>
+            <p id="ranking-player2">Jogador 2: 0 vitórias</p>
+        </div>
     </div>
 
     <script src="app.js"></script>
